@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		stop = false;
+		document.addEventListener('click', function(e){
+			if(stop == false){
+			right = player.style.getPropertyValue('left');
+			right = Number(right.substring(0, right.length - 2)) + 10;
+			player.style.setProperty('left', right + 'px');
+			}
+			else{
+			console.log('KILL');
+			document.body.style.backgroundColor = "#FF0000";
+			
+			}
+		});
+
+		setInterval(function(){ 
+		doll = document.getElementById('doll');  
+		walk = document.getElementById('walk');  
+		
+		doll.classList.toggle('face'); 
+		walk.classList.toggle('show'); 
+		
+		stop = !stop;
+
+		},4500);
+	</script>
+	<style>
+	#doll{background:url(doll-back.png);
+	width: 200px;
+	height:400px;
+	position:absolute;
+	right:10px;}
+	.face{background:url(doll-front.png)!important;}
+	audio{display:none;}
+	#player{position: absolute;}
+	.show{color: red!important;}
+	#walk{color:white}
+	</style>
+</head>
+<body>
+	<div id="player"><img src="player.png"/></div>
+	<div id="doll"></div>
+	<div id="walk"> STOP </div>
+	<audio controls autoplay loop>
+	<source src="sound.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+</body>
+</html>
