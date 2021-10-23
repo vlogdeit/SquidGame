@@ -1,0 +1,44 @@
+body{
+	background: url('../img/background.jpg');
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+
+/*Game*/
+.game{
+	height: 400px;
+	margin-top: 10%;
+}
+#status{
+	width: 100%;
+	color: green;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 5%;
+}
+
+/*Doll*/
+#doll{
+	background:url(../img/doll-back.png);
+	width: 200px;
+	height:400px;
+	position:absolute;
+	right:10px;
+}
+.face{
+	background:url(../img/doll-front.png)!important;
+}
+
+
+/*Player*/
+#player{
+	position: absolute;
+}
+
+
+/*Other*/
+audio{
+	display:none;
+}
+
